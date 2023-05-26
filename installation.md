@@ -20,6 +20,7 @@ The Laravel framework has a few system requirements. All of these requirements a
 However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
 
 <div class="content-list" markdown="1">
+
 - PHP >= 7.1.3
 - BCMath PHP Extension
 - Ctype PHP Extension
@@ -29,6 +30,7 @@ However, if you are not using Homestead, you will need to make sure your server 
 - PDO PHP Extension
 - Tokenizer PHP Extension
 - XML PHP Extension
+
 </div>
 
 <a name="installing-laravel"></a>
@@ -45,8 +47,10 @@ First, download the Laravel installer using Composer:
 Make sure to place composer's system-wide vendor bin directory in your `$PATH` so the laravel executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:
 
 <div class="content-list" markdown="1">
+
 - macOS and GNU / Linux Distributions: `$HOME/.composer/vendor/bin`
 - Windows: `%USERPROFILE%\AppData\Roaming\Composer\vendor\bin`
+
 </div>
 
 Once installed, the `laravel new` command will create a fresh Laravel installation in the directory you specify. For instance, `laravel new blog` will create a directory named `blog` containing a fresh Laravel installation with all of Laravel's dependencies already installed:
@@ -95,9 +99,11 @@ Laravel needs almost no other configuration out of the box. You are free to get 
 You may also want to configure a few additional components of Laravel, such as:
 
 <div class="content-list" markdown="1">
+
 - [Cache](/docs/{{version}}/cache#configuration)
 - [Database](/docs/{{version}}/database#configuration)
 - [Session](/docs/{{version}}/session#configuration)
+
 </div>
 
 <a name="web-server-configuration"></a>

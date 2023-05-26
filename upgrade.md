@@ -6,18 +6,21 @@
 ## High Impact Changes
 
 <div class="content-list" markdown="1">
+
 - [Cache TTL In Seconds](#cache-ttl-in-seconds)
 - [Cache Lock Safety Improvements](#cache-lock-safety-improvements)
 - [Environment Variable Parsing](#environment-variable-parsing)
 - [Markdown File Directory Change](#markdown-file-directory-change)
 - [Nexmo / Slack Notification Channels](#nexmo-slack-notification-channels)
 - [New Default Password Length](#new-default-password-length)
+
 </div>
 
 <a name="medium-impact-changes"></a>
 ## Medium Impact Changes
 
 <div class="content-list" markdown="1">
+
 - [Container Generators & Tagged Services](#container-generators)
 - [SQLite Version Constraints](#sqlite)
 - [Prefer String And Array Classes Over Helpers](#string-and-array-helpers)
@@ -27,6 +30,7 @@
 - [Custom Pivot Models With Incrementing IDs](#custom-pivot-models-with-incrementing-ids)
 - [Pheanstalk 4.0](#pheanstalk-4)
 - [Carbon 2.0](#carbon-2.0)
+
 </div>
 
 <a name="upgrade-5.8.0"></a>
@@ -527,6 +531,10 @@ The session persistence logic has been [moved from the `terminate()` method to t
 All `array_*` and `str_*` global helpers [have been deprecated](https://github.com/laravel/framework/pull/26898). You should use the `Illuminate\Support\Arr` and `Illuminate\Support\Str` methods directly.
 
 The impact of this change has been marked as `medium` since the helpers have been moved to the new [laravel/helpers](https://github.com/laravel/helpers) package which offers a backwards compatibility layer for all of the global array and string functions.
+
+If you choose to update your Laravel application's views to use the class based methods, you should clear your compiled views which may still be using the global helpers:
+
+    php artisan view:clear
 
 <a name="deferred-service-providers"></a>
 #### Deferred Service Providers

@@ -33,7 +33,7 @@
 Laravel Telescope is an elegant debug assistant for the Laravel framework. Telescope provides insight into the requests coming into your application, exceptions, log entries, database queries, queued jobs, mail, notifications, cache operations, scheduled tasks, variable dumps and more. Telescope makes a wonderful companion to your local Laravel development environment.
 
 <p align="center">
-<img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1539110860/Screen_Shot_2018-10-09_at_1.47.23_PM.png" width="600">
+<img src="https://laravel.com/assets/img/examples/Screen_Shot_2018-10-09_at_1.47.23_PM.png" width="600">
 </p>
 
 <a name="installation"></a>
@@ -41,7 +41,7 @@ Laravel Telescope is an elegant debug assistant for the Laravel framework. Teles
 
 You may use Composer to install Telescope into your Laravel project:
 
-    composer require laravel/telescope
+    composer require laravel/telescope "2.1.7"
 
 After installing Telescope, publish its assets using the `telescope:install` Artisan command. After installing Telescope, you should also run the `migrate` command:
 
@@ -59,7 +59,7 @@ When updating Telescope, you should re-publish Telescope's assets:
 
 If you plan to only use Telescope to assist your local development, you may install Telescope using the `--dev` flag:
 
-    composer require laravel/telescope --dev
+    composer require laravel/telescope "2.1.7" --dev
 
 After running `telescope:install`, you should remove the `TelescopeServiceProvider` service provider registration from your `app` configuration file. Instead, manually register the service provider in the `register` method of your `AppServiceProvider`:
 
